@@ -1,5 +1,5 @@
 <template>
-  <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+  <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;" >
     <a-assets>
       <img id="earth-sphere" crossorigin="anonymous" :src="imageUrl" />
     </a-assets>
@@ -17,6 +17,12 @@
   </a-scene>
 </template>
 <script setup>
-const imageUrl = new URL(`../assets/earth-sphere.jpeg?url`, import.meta.url).href;
+const imageUrl = new URL(`../assets/earth-sphere.jpeg?url`, import.meta.url)
+  .href;
 </script>
-<style lang="css"></style>
+<style lang="css">
+a-scene {
+  width: 100%;
+  height: 100%;
+}
+</style>
