@@ -15,8 +15,8 @@ Estou compartilhando esse estudo para servir de ponto de partida para quem queir
 
 ## Ideia
 
-Rodar projetos de realidade aumentada dentro de um LMS.
-Requisito seria um servidor de desenvolvimento que simula um ambiente Scorm e buildar um pacote come automaticamente como artefato.
+- Rodar projetos de realidade aumentada dentro de um LMS.
+- Seria interessante um servidor de desenvolvimento que simula um ambiente Scorm e buildar um pacote scorm automaticamente como artefato.
 
 # Desafio
 
@@ -27,7 +27,7 @@ Requisito seria um servidor de desenvolvimento que simula um ambiente Scorm e bu
 # Conclusão
 
 ## Build
-O pacote scorm precisa de alguns arquivos para funcionar corretamente, esses arquivos possuem um padrão e podem ser utilizados em todos os projetos, porém existe um xml onde informa as configurações do curso como:
+O pacote scorm precisa de alguns arquivos para funcionar corretamente (podem ser encontrados em `build/schemas`), esses arquivos possuem um padrão e podem ser utilizados em todos os projetos, porém existe um xml (`imsmanifest.xml`) onde informa as configurações do curso como:
 - Organização pertencente do curso
 - O Score que o curso vale
 - O nome do curso
@@ -37,6 +37,7 @@ Para resolver isso, foi implementado um gerador de xml que cria um arquivo de co
 ## Ambiente dev
 
 O pacote scorm irá ser executado dentro de um iFrame no LSM, isso significa que o sistema de rota do vue tem que ser executado como hash E não como histórico do navegador.
+
 Para simular o comportamento de um LMS foi usado um conjunto de Scripts e libs na pasta public. Foi configurado para o servidor iniciar na rota /scorm12.html, esse HTML está configurado com essas biblioteca que simulara um LMS e disponibilizará toda api do scorm e executará o index.html em um iFrame.
 
 ## Aframe e vue
