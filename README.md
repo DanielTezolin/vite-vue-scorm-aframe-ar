@@ -1,4 +1,18 @@
 
+# Scorm - realidade aumentada com vite e vue
+
+Esse projeto é um teste de realidade aumentada com Vue + vite rodando em Scorm.
+
+Estou compartilhando esse estudo para servir de ponto de partida para quem queira brincar com o Scorm e LMS, mostrando soluções para os possíveis problemas encontrados (e foram muitos kkkk)
+
+
+##  Tecnologias
+
+ - [Aframe](https://aframe.io/)
+ - [Ar.js](https://ar-js-org.github.io/AR.js-Docs/)
+ - [Vue+vite](https://vitejs.dev/)
+ - [SCORM API Wrapper](https://github.com/marco-loche/saw)
+
 ## Ideia
 
 Rodar projetos de realidade aumentada dentro de um LMS.
